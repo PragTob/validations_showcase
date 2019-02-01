@@ -10,7 +10,7 @@ class Event < ApplicationRecord
   ]
 
   def set_datetimes_to_date
-    base_date = date
+    base_date = date.to_datetime
 
     DATE_TIMES.each do |time_attribute|
       original = public_send(time_attribute)
