@@ -6,7 +6,7 @@ class LoopB < ApplicationRecord
     super
   end
 
-  before_validation do
+  before_save do
     loop_a.save!
   end
 end
