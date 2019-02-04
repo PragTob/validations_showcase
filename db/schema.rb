@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_01_155725) do
+ActiveRecord::Schema.define(version: 2019_02_04_161107) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 2019_02_01_155725) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["loop_a_id"], name: "index_loop_bs_on_loop_a_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
