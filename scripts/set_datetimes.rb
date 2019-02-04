@@ -10,6 +10,5 @@ event =
     ends_at: "22:00"
   )
 
-  p event
   event.valid?
-  p event
+  pp event
