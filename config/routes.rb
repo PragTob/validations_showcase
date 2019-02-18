@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :parients
+  resources :patients
   resources :practices
   resources :doctors
   resources :appointments

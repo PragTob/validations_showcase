@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "parients/edit", type: :view do
+RSpec.describe "patients/edit", type: :view do
   before(:each) do
-    @parient = assign(:parient, Parient.create!(
+    @patient = assign(:patient, Patient.create!(
       :name => "MyString"
     ))
   end
 
-  it "renders the edit parient form" do
+  it "renders the edit patient form" do
     render
 
-    assert_select "form[action=?][method=?]", parient_path(@parient), "post" do
+    assert_select "form[action=?][method=?]", patient_path(@patient), "post" do
 
-      assert_select "input[name=?]", "parient[name]"
+      assert_select "input[name=?]", "patient[name]"
     end
   end
 end

@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe "parients/index", type: :view do
+RSpec.describe "patients/index", type: :view do
   before(:each) do
-    assign(:parients, [
-      Parient.create!(
+    assign(:patients, [
+      Patient.create!(
         :name => "Name"
       ),
-      Parient.create!(
+      Patient.create!(
         :name => "Name"
       )
     ])
   end
 
-  it "renders a list of parients" do
+  it "renders a list of patients" do
     render
     assert_select "tr>td", :text => "Name".to_s, :count => 2
   end

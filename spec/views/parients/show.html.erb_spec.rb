@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "parients/show", type: :view do
+RSpec.describe "patients/show", type: :view do
   before(:each) do
-    @parient = assign(:parient, Parient.create!(
+    @patient = assign(:patient, Patient.create!(
       :name => "Name"
     ))
   end
