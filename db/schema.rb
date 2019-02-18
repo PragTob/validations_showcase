@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_04_161107) do
+ActiveRecord::Schema.define(version: 2019_02_18_152042) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -35,6 +49,20 @@ ActiveRecord::Schema.define(version: 2019_02_04_161107) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["loop_a_id"], name: "index_loop_bs_on_loop_a_id"
+  end
+
+  create_table "parients", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "practices", force: :cascade do |t|
+    t.string "name"
+    t.datetime "opens_at"
+    t.datetime "closes_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :parients
+  resources :practices
+  resources :doctors
+  resources :appointments
   resources :users
   resources :events
   resources :registrations

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @practice.name %>
+</p>
+
+<p>
+  <strong>Opens at:</strong>
+  <%= @practice.opens_at %>
+</p>
+
+<p>
+  <strong>Closes at:</strong>
+  <%= @practice.closes_at %>
+</p>
+
+<%= link_to 'Edit', edit_practice_path(@practice) %> |
+<%= link_to 'Back', practices_path %>

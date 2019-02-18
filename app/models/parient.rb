@@ -1,0 +1,2 @@
+class Parient < ApplicationRecord
+end
