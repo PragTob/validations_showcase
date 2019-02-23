@@ -5,6 +5,10 @@ ruby '2.6.0'
 
 gem 'active_type'
 gem 'trailblazer-rails'
+gem 'reform', '2.3.0.rc1'
+gem 'reform-rails'
+gem 'dry-validation'
+gem 'dry-types'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
