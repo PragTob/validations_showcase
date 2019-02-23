@@ -6,22 +6,18 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    @user = Registration.new(user_params)
+    @user = Registration.new(registration_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to "/users/", notice: 'User was successfully created.' }
-        format.json { render "users/show", status: :created, location: @user }
-      else
-        format.html { render "users/new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      redirect_to "/users/", notice: 'User was successfully created.'
+    else
+      render "users/new"
     end
   end
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
+    def registration_params
       params.require(:registration).permit(:email, :password, :terms, :password_confirmation, :email_confirmation)
     end
 end
